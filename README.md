@@ -99,7 +99,7 @@ values
 ('admin', 'admin@test.com', MD5('12345'), 2);
 ```
 ## Setup env
-copy example.env to env and change settings database mysql appropriate.
+copy example.env file to .env file and change settings database mysql appropriate.
 Caution: don't change src_path=/app/ param. this will crash the app.
 
 ## Usage
