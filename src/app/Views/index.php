@@ -69,7 +69,10 @@
             <div class="col-md-6 pb-5 pt-5">
                 <div class="comment"><?php echo $commentsArr[$i]['content']; ?></div>
                 <div class="row info-container pt-3 pb-3">
-                    <div class="name col-sm-8 col-7"><?php echo $commentsArr[$i]['name']; ?></div>
+                    <div class="col-sm-8 col-7">
+                        <div class="row name"><?php echo $commentsArr[$i]['name']; ?></div>
+                        <div class="row"><?php echo date('dS M, Y', strtotime($commentsArr[$i]['comment_updated_at'])) . ' at ' . date('h:ia', strtotime($commentsArr[$i]['comment_updated_at'])); ?></div>
+                    </div>
                     <?php if(isset($_SESSION['login_flag']) && $_SESSION['login_flag']) { ?>
                     <div class="cta-wrapper col-sm-4 col-5">
                         <div class="cta">
@@ -98,7 +101,10 @@
             <div class="col-md-6 pb-5 pt-5">
                 <div class="comment"><?php echo $commentsArr[$j]['content']; ?></div>
                 <div class="row info-container pt-3 pb-3">
-                    <div class="name col-sm-8 col-7"><?php echo $commentsArr[$j]['name']; ?></div>
+                    <div class="col-sm-8 col-7">
+                        <div class="row name"><?php echo $commentsArr[$j]['name']; ?></div>
+                        <div class="row"><?php echo date('dS M, Y', strtotime($commentsArr[$j]['comment_updated_at'])) . ' at ' . date('h:ia', strtotime($commentsArr[$j]['comment_updated_at'])); ?></div>
+                    </div>
                     <?php if(isset($_SESSION['login_flag']) && $_SESSION['login_flag']) { ?>
                     <div class="cta-wrapper col-sm-4 col-5">
                         <div class="cta">
